@@ -1,10 +1,24 @@
-import cls from "./LocationCard.module.scss";
-import { useLocationsStore } from "../../../store/useLocationsStore.ts";
-import { ILocationCard } from "../types/locationCard.types.ts";
-import Select from "react-select";
 import { ChangeEvent, useMemo, useState } from "react";
+import Select from "react-select";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faFlask, faServer, faQuestion } from "@fortawesome/free-solid-svg-icons";
+
+import { useLocationsStore } from "../../../store/useLocationsStore.ts";
+
+import cls from "./LocationCard.module.scss";
+
+export interface ILocationCard {
+  id: number;
+  title: string;
+  locationId?: number;
+  environmentID?: number;
+  hint?: string;
+}
+
+interface ISelect {
+  value: number;
+  label: string;
+}
 
 interface IProps {
   location: ILocationCard;
@@ -12,11 +26,6 @@ interface IProps {
   changeLocation: (id: number, locationId: number) => void;
   changeEnvironment: (id: number, environmentID: number) => void;
   changeHint: (id: number, hint: string) => void;
-}
-
-interface ISelect {
-  value: number;
-  label: string;
 }
 
 export const LocationCard = (props: IProps) => {

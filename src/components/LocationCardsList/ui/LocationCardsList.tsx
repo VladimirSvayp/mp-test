@@ -1,12 +1,12 @@
 import { useCallback, useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 import { ILocationCard, LocationCard } from "../../LocationCard";
 
 import { useLocationsStore } from "../../../store/useLocationsStore.ts";
 
 import cls from "./LocationCardsList.module.scss";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 export const LocationCardsList = () => {
   const { fetch, isLoaded } = useLocationsStore();
