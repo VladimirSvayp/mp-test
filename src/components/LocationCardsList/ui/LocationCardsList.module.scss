@@ -1,0 +1,42 @@
+.LocationCardsList {
+  margin: 20px 0;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.addCard, .logsBtn {
+  background-color: transparent;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+.addCard {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d3eafb;
+  color: #2f9bf0;
+  gap: 10px;
+  &:hover {
+    background-color: #d3eafb;
+    border-color: transparent;
+  }
+}
+
+.logsBtn {
+  border: 1px solid #7ae851;
+  color: #7ae851;
+  &:hover {
+    background-color: #7ae851;
+    color: #fff;
+    border-color: transparent;
+  }
+}
+
+.actionBtns {
+  display: flex;
+  gap: 20px;
+}
